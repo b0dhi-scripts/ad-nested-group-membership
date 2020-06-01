@@ -1,7 +1,7 @@
 ﻿import-module activedirectory
 
 $Results = @()
-    $input = Read-Host -Prompt 'Input Data Path'
+    $input = Read-Host "Enter File Path: "
     $Path = Get-Item -Path $input
     $Acl = Get-Acl $Path
     foreach ($Access in $acl.Access) 
