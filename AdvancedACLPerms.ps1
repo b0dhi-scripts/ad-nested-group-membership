@@ -1,4 +1,4 @@
-﻿$path = "\\Jupiter\M$"
+﻿$path = Read-Host "Enter path: "
 $acl = Get-ACL $path
 $dacl = ConvertFrom-SddlString -Sddl $acl.Sddl | Foreach-Object {$_.DiscretionaryACL}
 Write-Host ("-" * 10) -Fore Cyan
